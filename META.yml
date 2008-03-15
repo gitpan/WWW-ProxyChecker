@@ -1,0 +1,24 @@
+---
+name: WWW-ProxyChecker
+version: 0.001
+author:
+  - 'Zoffix Znet <zoffix@cpan.org>'
+abstract: check whether or not proxy servers are alive
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Carp: 1.04
+  Class::Data::Accessor: 0.04001
+  IO::Pipe: 1.13
+  LWP::UserAgent: 2.036
+build_requires:
+  Test::More: 0
+provides:
+  WWW::ProxyChecker:
+    file: lib/WWW/ProxyChecker.pm
+    version: 0.001
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
