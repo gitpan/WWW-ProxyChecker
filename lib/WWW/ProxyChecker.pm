@@ -3,7 +3,7 @@ package WWW::ProxyChecker;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 use Carp;
 use LWP::UserAgent;
 use IO::Pipe;
@@ -199,6 +199,7 @@ working proxies are actually good.
     my $checker_juicy = WWW::ProxyChecker->new(
         timeout       => 5,
         max_kids      => 20,
+        max_working_per_child => 2,
         check_sites   => [ qw(
                 http://google.com
                 http://microsoft.com
@@ -260,6 +261,18 @@ simultaneously. It will fork less if the total number of proxies to check
 is less than C<max_kids>. Technically, setting this to a higher value
 might speed up the overall process but keep in mind that it's the number
 of simultaneous connections that you will have open. B<Defaults to:> C<20>
+
+=head3 max_working_per_child
+
+    ->new( max_working_per_child => 2 );
+
+B<Optional>. Takes a positive integer as a value. Specifies how many
+working proxies each sub proccess should find before aborting (it will
+also abort if proxy list is exhausted). In other words, setting C<20>
+C<max_kids> and C<max_working_per_child> to C<2> will give you 40 working
+proxies at most, no matter how many are in the original list. Specifying
+C<undef> will get rid of limit and make each kid go over the entire sub
+list it was given. B<Defaults to:> C<undef> (go over entire sub list)
 
 =head3 debug
 

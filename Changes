@@ -1,5 +1,9 @@
 Revision history for WWW-ProxyChecker
 
+0.002   Mar 16, 2008
+        fixed the documentation which was missing 'max_working_per_kid'
+        description
+
 0.001   Mar 15, 2008
         First version, released on an unsuspecting world.
 

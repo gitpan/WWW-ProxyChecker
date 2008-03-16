@@ -1,6 +1,6 @@
 ---
 name: WWW-ProxyChecker
-version: 0.001
+version: 0.002
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: check whether or not proxy servers are alive
@@ -17,7 +17,7 @@ build_requires:
 provides:
   WWW::ProxyChecker:
     file: lib/WWW/ProxyChecker.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
