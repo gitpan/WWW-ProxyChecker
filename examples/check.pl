@@ -3,7 +3,9 @@
 use strict;
 use warnings;
 
-use lib '../lib';
+# VERSION
+
+use lib qw(lib  ../lib);
 use WWW::ProxyChecker;
 
 my $checker = WWW::ProxyChecker->new( debug => 1 );

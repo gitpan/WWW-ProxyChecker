@@ -9,7 +9,7 @@ BEGIN {
     use_ok('Carp');
     use_ok('LWP::UserAgent');
     use_ok('IO::Pipe');
-    use_ok('Class::Data::Accessor');
+    use_ok('Class::Accessor::Grouped');
 	use_ok( 'WWW::ProxyChecker' );
 }
 
